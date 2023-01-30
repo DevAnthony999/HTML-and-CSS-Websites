@@ -296,7 +296,7 @@ main {
 /* Setting up grid-content */
 #portfolio-main-container {
     padding: 1% 10%;
-    background-image: url(/assets/background.jpg);
+    background-image: url(./assets/background.jpg);
     scroll-margin-top: 4vh;
     min-height: 120vh;
     background-size: cover;
