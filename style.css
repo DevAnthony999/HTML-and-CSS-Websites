@@ -158,45 +158,29 @@ main {
     display: flex;
     flex-direction: column;
     scroll-margin-top: 6vh;
-    padding: 4% 20%;
+    padding: 2% 20%;
+    min-height: 30vh;
+    justify-content: center;
 }
 
 .about {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me {
-    max-width: 44%;
-    font-size: 20px;
+
+    font-size: 24px;
     line-height: 35px;
     font-style: italic;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.about-me2 {
-    font-size: 20px;
-    display: flex;
-    line-height: 35px;
-    margin-bottom: 40px;
-    max-width: 100%;
-    justify-content: center;
-}
-
-.about-me2-container {
-    width: 40%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -1px 6px 12px 6px rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.left-info-about {
-    margin-right: 20px;
+.title-about {
+    margin-bottom: 10px;
 }
 
 .resume-button a {
@@ -227,7 +211,6 @@ main {
     min-height: 94vh;
     background: radial-gradient(circle, rgba(31, 39, 49, 1) 0%, rgba(15, 25, 34, 1) 100%);
 }
-
 
 .skills {
     display: flex;
@@ -295,16 +278,18 @@ main {
 /* Project Grid Content */
 /* Setting up grid-content */
 #portfolio-main-container {
-    padding: 1% 10%;
+    padding: 5% 10%;
     background-image: url(./assets/background.jpg);
     scroll-margin-top: 4vh;
-    min-height: 120vh;
+    min-height: 150vh;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio {
     display: grid;
-    gap: 4%;
+    gap: 20% 5%;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -318,6 +303,7 @@ main {
 
 .title-portfolio {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .proj-img img {
@@ -326,11 +312,12 @@ main {
 
 .proj-info {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .proj-links a {
     color: #00ADB5;
+    margin-bottom: 10px;
 }
 
 .title-portfolio h3 {
@@ -345,14 +332,20 @@ main {
 }
 
 .proj-info h4 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.proj-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 
 /* Contact Content */
 #contact-main-container {
     background-color: white;
-    min-height: 94vh;
+    min-height: 30vh;
     scroll-margin-top: 5.9vh;
     background-color: #0f1922;
     display: grid;
@@ -394,12 +387,12 @@ label {
 }
 
 .contact {
-    max-width: 600px;
-    min-width: 200px
+    min-width: 800px;
+    padding: 20px
 }
 
 .form button {
-    max-width: 25%;
+    max-width: 20%;
     margin-top: 50px;
     color: #EEEEEE;
     padding: 10px;
@@ -433,6 +426,7 @@ label {
 
 .contact-info {
     max-width: 600px;
+    padding: 20px;
 }
 
 .contact-info p {
@@ -458,6 +452,7 @@ label {
     opacity: 0.5;
 }
 
+
 /* Media Queries */
 /* Medium Devices*/
 @media only screen and (max-width: 1500px) {
@@ -479,6 +474,14 @@ label {
 
     #contact-main-container {
         padding: 10% 10%;
+    }
+
+    .contact {
+        min-width: 600px;
+    }
+
+    .form button {
+        max-width: 25%;
     }
 }
 
@@ -502,6 +505,14 @@ label {
     #contact-main-container {
         padding: 5% 5%;
     }
+
+    .contact {
+        min-width: 500px;
+    }
+
+    .form button {
+        max-width: 30%;
+    }
 }
 
 
@@ -510,7 +521,6 @@ label {
     .menu {
         display: flex;
         background-color: #0f1922;
-        /* height: 200px; */
         justify-content: center;
         align-items: center;
         padding: 10px 10px;
@@ -594,13 +604,12 @@ label {
     #skills-main-container {
         padding: 5% 5%;
         scroll-margin-top: 200px;
-        /* height: 80vh; */
     }
 
     #portfolio-main-container {
         padding: 5% 5%;
         scroll-margin-top: 200px;
-        /* height: 140vh; */
+        min-height: 190vh;
         background-color: black;
         background-image: none;
     }
@@ -616,6 +625,7 @@ label {
         grid-template-columns: auto;
         justify-content: center;
         padding: 5% 5%;
+        align-items: center;
     }
 
     .contact {
@@ -631,7 +641,6 @@ label {
     #portfolio-main-container {
         padding: 5% 5%;
         scroll-margin-top: 200px;
-        /* height: 270vh; */
     }
 
     .portfolio {
@@ -644,11 +653,6 @@ label {
         line-height: normal;
     }
 
-    .about-me2-container {
-        width: 100%;
-        margin-top: 20px;
-    }
-
     .resume-button a {
         margin: 20px 0;
         color: #EEEEEE;
@@ -658,7 +662,11 @@ label {
     }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    .contact {
+        min-width: 400px;
     }
 }
 
@@ -675,5 +683,13 @@ label {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .contact {
+        min-width: 200px;
+    }
+
+    .form button {
+        width: 30%;
     }
 }
